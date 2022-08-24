@@ -1,3 +1,6 @@
+import { DATABASE_HOST, DATABASE_PORT, DATABASE_USER, DATABASE_PASSWORD, DATABASE_NAME} from "../env"
+
+
 export default {
     sqlite3: {
         client: 'sqlite3',
@@ -9,10 +12,11 @@ export default {
     mariaDb: {
         client: 'mysql',
         connection: {
-            host: 'localhost',
-            user: 'coderhouse',
-            password: 'coderhouse',
-            database: 'coderhouse'
+            host: DATABASE_HOST,
+            port: DATABASE_PORT,
+            user: DATABASE_USER,
+            password: DATABASE_PASSWORD,
+            database: DATABASE_NAME,
         }
     }
 }
